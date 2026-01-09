@@ -2,6 +2,7 @@
 import { useState, useEffect, useMemo } from 'react';
 import { produtos } from '../data/produtos';
 
+
 export default function Home() {
   const [categoriaAtiva, setCategoriaAtiva] = useState("Fone de Ouvido");
   const [busca, setBusca] = useState("");

@@ -1,32 +1,20 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+export const metadata: Metadata = {
+  title: "TechRadarBR | Melhores Preços 2026",
+  description: "Encontre os melhores preços de fones, celulares e smartwatches.",
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-export const metadata = {
-  title: 'TechRadarBR | Melhores Preços de Fone Bluetooth, Celular e Smartwatch',
-  description: 'Guia definitivo de compra. Melhores preços de fones JBL, Anker, Samsung e Motorola. Confira qual fone bluetooth comprar e as melhores ofertas de celulares 2026.',
-  keywords: 'melhor preço fone bluetooth, celular barato 2026, qual fone comprar, fone de ouvido academia, smartwatch promoção amazon',
-  openGraph: {
-    title: 'TechRadarBR - Ofertas de Tecnologia',
-    description: 'A curadoria mais completa de eletrônicos com os menores preços da Amazon.',
-    url: 'https://www.techradarbr.com.br', // Substitua pelo seu domínio final
-    siteName: 'TechRadarBR',
-    images: [{ url: '/og-image.jpg' }], // Salve uma imagem legal com este nome na pasta public
-    type: 'website',
+  verification: {
+    google: "4XVV-N64t-QysPE1lupuGrpHHFE1BPwuEMFQOMls3IE",
   },
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="pt-br">
       <body>{children}</body>
